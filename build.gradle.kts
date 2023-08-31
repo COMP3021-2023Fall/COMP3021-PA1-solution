@@ -31,18 +31,18 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.guardsquare:proguard-gradle:7.2.2")
+        classpath("com.guardsquare:proguard-gradle:7.3.2")
     }
 }
 
 dependencies {
-    testImplementation("org.jetbrains:annotations:23.0.0")
-    compileOnly("org.jetbrains:annotations:23.0.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.0")
-    testImplementation("org.mockito:mockito-core:4.8.0")
+    testImplementation("org.jetbrains:annotations:24.0.1")
+    compileOnly("org.jetbrains:annotations:24.0.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.0")
+    testImplementation("org.mockito:mockito-core:5.5.0")
     testImplementation("org.apache.commons:commons-collections4:4.4")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
 }
 
 checkstyle {
