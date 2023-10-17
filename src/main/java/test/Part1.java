@@ -43,13 +43,13 @@ public class Part1 {
         system.parseCourses("course.txt");
 
         for (int i = 0; i < 10; i++) {
-            system.students.add(new Student(""+i, "", 1, 4, new ArrayList<>(List.of("COMP1000")), new ArrayList<>()));
+            system.students.add(new Student(""+i, "", 1, 4.0, new ArrayList<>(List.of("COMP1000")), new ArrayList<>()));
         }
         for (int i = 10; i < 20; i++) {
-            system.students.add(new Student(""+i, "", 1, 4, new ArrayList<>(List.of("COMP1000", "PHYS1001")), new ArrayList<>()));
+            system.students.add(new Student(""+i, "", 1, 4.0, new ArrayList<>(List.of("COMP1000", "PHYS1001")), new ArrayList<>()));
         }
         for (int i = 20; i < 25; i++) {
-            system.students.add(new Student(""+i, "", 1, 4, new ArrayList<>(List.of("BIEN1000", "PHYS1001")), new ArrayList<>()));
+            system.students.add(new Student(""+i, "", 1, 4.0, new ArrayList<>(List.of("BIEN1000", "PHYS1001")), new ArrayList<>()));
         }
         system.enrollFirstRound();
 
