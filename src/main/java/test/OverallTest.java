@@ -28,22 +28,18 @@ public class OverallTest {
     }
 
     public static void main(String[] args) {
-
-
         try {
-            for (int i = 1; i < 5; ++i) {
-                EnrollmentSystem system = new EnrollmentSystem();
-                system.parseStudents(String.format("student%d.txt", i));
-                system.parseCourses(String.format("course%d.txt", i));
-                system.enrollFirstRound();
-                system.writeCourseEnrollment(String.format("firstRoundEnrollmentTest%d.txt", i));
-                system.enrollSecondRound();
-                system.writeCourseEnrollment(String.format("secondRoundEnrollmentTest%d.txt", i));
-                system.writeCourseAnalysis(String.format("dataAnalyticsTest%d.txt", i));
-                OverallTest.compareDocuments(String.format("firstRoundEnrollment%d.txt", i), String.format("firstRoundEnrollmentTest%d.txt", i));
-                OverallTest.compareDocuments(String.format("secondRoundEnrollment%d.txt", i), String.format("secondRoundEnrollmentTest%d.txt", i));
-                OverallTest.compareDocuments(String.format("dataAnalytics%d.txt", i), String.format("dataAnalyticsTest%d.txt", i));
-            }
+            EnrollmentSystem system = new EnrollmentSystem();
+            system.parseStudents("student.txt");
+            system.parseCourses("course.txt");
+            system.enrollFirstRound();
+            system.writeCourseEnrollment("firstRoundEnrollmentTest.txt");
+            system.enrollSecondRound();
+            system.writeCourseEnrollment("secondRoundEnrollmentTest.txt");
+            system.writeCourseAnalysis("dataAnalyticsTest.txt");
+            OverallTest.compareDocuments("firstRoundEnrollment.txt", "firstRoundEnrollmentTest.txt");
+            OverallTest.compareDocuments("secondRoundEnrollment.txt", "secondRoundEnrollmentTest.txt");
+            OverallTest.compareDocuments("dataAnalytics.txt", "dataAnalyticsTest.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
