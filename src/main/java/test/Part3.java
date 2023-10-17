@@ -78,7 +78,7 @@ public class Part3 {
         if (!system.courses.get("COMP2011").waitlist.contains(t1.studentid))
             throw new AssertionError();
         if (!system.courses.get("BIEN1000").waitlist.contains(t4.studentid))
-            throw new AssertionError();
+            throw new AssertionError("t4 is not in the waitlist of BIEN1000 - mistakenly take department priority for common core courses");
         for (int i = 6; i < 9; i++) {
             if (system.courses.get("MATH1001").waitlist.contains(t4.studentid))
                 throw new AssertionError();
