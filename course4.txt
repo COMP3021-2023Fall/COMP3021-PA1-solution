@@ -1,0 +1,15 @@
+ELEC1000, ECE, CommonCore, true, NA
+COMP3021, CSE, Major, NA, [COMP2010]
+SOSC2000, SHSS, CommonCore, false, NA
+ISDN3010, ISD, Major, NA, [COMP2010]
+ISDN1000, ISD, Major, NA, []
+ISDN1002, ISD, Major, NA, [COMP1001]
+ELEC3010, ECE, CommonCore, true, NA
+ISDN3021, ISD, Major, NA, []
+PPOL3010, IPP, Major, NA, [COMP2000]
+ELEC3010, ECE, Major, NA, []
+SOSC1000, SHSS, CommonCore, true, NA
+COMP1000, CSE, CommonCore, true, NA
+MECH1000, MAE, CommonCore, false, NA
+ELEC3010, ECE, Major, NA, [COMP3010]
+SOSC2010, SHSS, CommonCore, false, NA
