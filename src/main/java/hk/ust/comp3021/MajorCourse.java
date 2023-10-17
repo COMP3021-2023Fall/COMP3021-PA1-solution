@@ -3,7 +3,7 @@ package hk.ust.comp3021;
 import java.util.*;
 
 public class MajorCourse extends Course implements Enrollable {
-    List<String> prerequisites;
+    private List<String> prerequisites;
 
     public MajorCourse(String courseCode, String department, List<String> prerequisites) {
         super(courseCode, department);

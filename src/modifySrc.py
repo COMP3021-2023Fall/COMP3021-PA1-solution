@@ -1,12 +1,14 @@
 import os
 import re
 
-def process_java_code(java_code, attributes_to_change):
+def process_java_code(filename, java_code, attributes_to_change):
     # Add "this." before the lowercased attribute if it's being assigned 
     # and has no leading "this." and is at the beginning of a line.
     for attr in attributes_to_change:
         pattern_assignment = r'(?m)^\s*(?<!this\.)\b' + re.escape(attr) + r'\s*='
         replacement = lambda match: match[0][:len(match[0]) - len(match[0].lstrip())] + 'this.' + attr.lower() + ' ='
+        if filename == 'EnrollmentSystem.java':
+            replacement = lambda match: match[0][:len(match[0]) - len(match[0].lstrip())] + attr.lower() + ' ='
         java_code = re.sub(pattern_assignment, replacement, java_code, flags=re.IGNORECASE)
 
     # Convert private to public
@@ -30,7 +32,7 @@ def process_directory(directory_path, attributes_to_change):
                 content = file.read()
             
             # Process the content
-            modified_content = process_java_code(content, attributes_to_change)
+            modified_content = process_java_code(filename, content, attributes_to_change)
             
             # Overwrite the original file with the modified content
             with open(filepath, 'w') as file:

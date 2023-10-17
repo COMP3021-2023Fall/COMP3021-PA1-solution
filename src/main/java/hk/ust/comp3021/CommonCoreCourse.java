@@ -1,7 +1,7 @@
 package hk.ust.comp3021;
 
 public class CommonCoreCourse extends Course implements Enrollable {
-    boolean isHonorsCourse;
+    private boolean isHonorsCourse;
 
     public CommonCoreCourse(String courseCode, String department, boolean isHonorsCourse) {
         super(courseCode, department);
