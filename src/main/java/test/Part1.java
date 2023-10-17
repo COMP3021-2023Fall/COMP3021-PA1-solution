@@ -6,6 +6,7 @@ import hk.ust.comp3021.MajorCourse;
 import hk.ust.comp3021.Student;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,13 +16,13 @@ public class Part1 {
 
         system.parseStudents("student.txt");
         for (int i = 0; i < system.students.size(); i++) {
-            if (!Objects.equals(system.students.get(i).getStudentID(), String.format("s10%02d", i+1)))
+            if (!Objects.equals(system.students.get(i).studentid, String.format("s10%02d", i+1)))
                 throw new AssertionError();
         }
 
-        if (system.students.get(0).getCompletedCourses() == null || system.students.get(0).getCompletedCourses().isEmpty())
+        if (system.students.get(0).completedcourses == null || system.students.get(0).completedcourses.isEmpty())
             throw new AssertionError();
-        if (!Objects.equals(system.students.get(5).getCompletedCourses().get(0), "MATH2011"))
+        if (!Objects.equals(system.students.get(5).completedcourses.get(0), "MATH2011"))
             throw new AssertionError();
 
         system.parseCourses("course.txt");
@@ -42,21 +43,21 @@ public class Part1 {
         system.parseCourses("course.txt");
 
         for (int i = 0; i < 10; i++) {
-            system.students.add(new Student(""+i, "", 1, 4, List.of("COMP1000"), null));
+            system.students.add(new Student(""+i, "", 1, 4, new ArrayList<>(List.of("COMP1000")), new ArrayList<>()));
         }
         for (int i = 10; i < 20; i++) {
-            system.students.add(new Student(""+i, "", 1, 4, List.of("COMP1000", "PHYS1001"), null));
+            system.students.add(new Student(""+i, "", 1, 4, new ArrayList<>(List.of("COMP1000", "PHYS1001")), new ArrayList<>()));
         }
         for (int i = 20; i < 25; i++) {
-            system.students.add(new Student(""+i, "", 1, 4, List.of("BIEN1000", "PHYS1001"), null));
+            system.students.add(new Student(""+i, "", 1, 4, new ArrayList<>(List.of("BIEN1000", "PHYS1001")), new ArrayList<>()));
         }
         system.enrollFirstRound();
 
-        if (system.courses.get("COMP1000").getEnrolledStudents().size() != 20)
+        if (system.courses.get("COMP1000").enrolledstudents.size() != 20)
             throw new AssertionError();
-        if (system.courses.get("PHYS1001").getEnrolledStudents().size() != 15)
+        if (system.courses.get("PHYS1001").enrolledstudents.size() != 15)
             throw new AssertionError();
-        if (system.courses.get("BIEN1000").getEnrolledStudents().size() != 5)
+        if (system.courses.get("BIEN1000").enrolledstudents.size() != 5)
             throw new AssertionError();
     }
 
