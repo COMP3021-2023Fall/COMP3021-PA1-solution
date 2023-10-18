@@ -15,10 +15,10 @@ public class Part2 {
         system.parseCourses("course.txt");
 
         for (int i = 0; i < 9; i++) {
-            system.students.add(new Student(""+0, "", 1, 4.0, new ArrayList<>(List.of("COMP1000", "PHYS1001")), new ArrayList<>()));
+            system.students.add(new Student("0"+i, "", 1, 4.0, new ArrayList<>(List.of("COMP1000", "PHYS1001")), new ArrayList<>()));
         }
-        Student t1 = new Student(""+1, "", 1, 4.0, new ArrayList<>(List.of("MATH1001", "COMP1000", "PHYS1001", "ELEC1001")), new ArrayList<>());
-        Student t2 = new Student(""+2, "", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP1000")), new ArrayList<>());
+        Student t1 = new Student(""+10, "", 1, 4.0, new ArrayList<>(List.of("MATH1001", "COMP1000", "PHYS1001", "ELEC1001")), new ArrayList<>());
+        Student t2 = new Student(""+11, "", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP1000")), new ArrayList<>());
         system.students.add(t1);
         system.students.add(t2);
         system.enrollFirstRound();
@@ -39,14 +39,14 @@ public class Part2 {
         system.parseCourses("course.txt");
 
         for (int i = 0; i < 9; i++) {
-            system.students.add(new Student(""+0, "", 1, 4.0, new ArrayList<>(List.of("ELEC1001", "COMP2011", "BIEN1000")), new ArrayList<>()));
+            system.students.add(new Student("0"+i, "", 1, 4.0, new ArrayList<>(List.of("ELEC1001", "COMP2011", "BIEN1000")), new ArrayList<>()));
         }
-        Student t1 = new Student(""+1, "ECE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
-        Student t2 = new Student(""+2, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
+        Student t1 = new Student(""+10, "ECE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
+        Student t2 = new Student(""+11, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
         system.students.add(t1);
         system.students.add(t2);
-        Student t3 = new Student(""+3, "CBE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "BIEN1000")), new ArrayList<>());
-        Student t4 = new Student(""+4.0, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "BIEN1000")), new ArrayList<>());
+        Student t3 = new Student(""+12, "CBE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "BIEN1000")), new ArrayList<>());
+        Student t4 = new Student(""+13, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "BIEN1000")), new ArrayList<>());
         system.students.add(t3);
         system.students.add(t4);
         system.enrollFirstRound();
@@ -92,14 +92,14 @@ public class Part2 {
         system.parseCourses("course.txt");
 
         for (int i = 0; i < 9; i++) {
-            system.students.add(new Student(""+0, "", 1, 4.0, new ArrayList<>(List.of("ELEC1001", "COMP2011", "BIEN1000")), new ArrayList<>()));
+            system.students.add(new Student("0"+i, "", 1, 4.0, new ArrayList<>(List.of("ELEC1001", "COMP2011", "BIEN1000")), new ArrayList<>()));
         }
-        Student t1 = new Student(""+1, "ECE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
-        Student t2 = new Student(""+2, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
+        Student t1 = new Student(""+10, "ECE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
+        Student t2 = new Student(""+11, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
         system.students.add(t1);
         system.students.add(t2);
-        Student t3 = new Student(""+3, "CBE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "BIEN1000")), new ArrayList<>());
-        Student t4 = new Student(""+4.0, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "BIEN1000")), new ArrayList<>());
+        Student t3 = new Student(""+12, "CBE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "BIEN1000")), new ArrayList<>());
+        Student t4 = new Student(""+13, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "BIEN1000")), new ArrayList<>());
         system.students.add(t3);
         system.students.add(t4);
         system.enrollFirstRound();

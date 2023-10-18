@@ -60,7 +60,7 @@ public class Part3 {
         system.parseCourses("course.txt");
 
         for (int i = 0; i < 9; i++) {
-            system.students.add(new Student(""+i, "", 1, 4.0, new ArrayList<>(List.of("ELEC1001", "COMP2011", "BIEN1000", "MATH1001")), new ArrayList<>()));
+            system.students.add(new Student("0"+i, "", 1, 4.0, new ArrayList<>(List.of("ELEC1001", "COMP2011", "BIEN1000", "MATH1001")), new ArrayList<>()));
         }
         Student t1 = new Student(""+10, "ECE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
         Student t2 = new Student(""+11, "CSE", 1, 4.0, new ArrayList<>(List.of("MATH1001", "PHYS1001", "ELEC1001", "COMP2011")), new ArrayList<>());
